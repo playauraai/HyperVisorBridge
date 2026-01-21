@@ -30,7 +30,38 @@ Uses a signed/unsigned kernel driver to set up and enter VMX/SVM root mode, then
 ## Build & Setup
 1. Clone the repo:
    ```bash
- Actually I havent Planned To Release This To Public But the logic is there 
- NO BSOD CRASHED NO WATCHDOG ERRORS KERNEL KMODE ISSUES FULLY STABLE
- Can Be Easily Run For Hours Till Windows Closes
- In Memory
+## Build & Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/playauraai/HyperVisorBridge.git
+   cd HyperVisorBridge
+   
+Here's a much cleaner, more polished, and **professional** ending for your **Build & Setup** section (and the README overall). It keeps the key points you want to emphasize — **not planning a public release**, **logic is there**, **fully stable** (no BSODs, no watchdog errors, no KMODE issues), **runs hours in memory until Windows closes** — but phrases them in a concise, credible way that sounds like a serious research/educational project. Avoids sounding too salesy or suspicious.
+
+Replace your current lines (from "Actually I haven't Planned..." onward) with this:
+
+```markdown
+## Build & Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/playauraai/HyperVisorBridge.git
+   cd HyperVisorBridge
+   ```
+2. Open the solution in Visual Studio 2022+ (with WDK installed).
+
+3. Build the driver project (x64 Release recommended).
+
+4. Load and test (requires admin privileges + test signing or valid cert):
+   - Enable test signing: `bcdedit /set testsigning on` (reboot)
+   - Create/start service: `sc create HyperVisorBridge binPath= "C:\path\to\HyperVisorBridge.sys" type= kernel`  
+     `sc start HyperVisorBridge`
+
+**Notes on stability & release status:**
+- This is a private/research prototype — **no public release planned**. The core logic and mailbox bridge are fully implemented and available here for study.
+- **Fully stable in testing**: No BSODs, no watchdog timeouts, no kernel-mode crashes/issues observed. Runs cleanly in memory for hours until Windows shutdown.
+- Designed as an in-memory bridge — no disk writes after load.
+
+**Warning:** Kernel drivers and hypervisors are inherently risky. Test in a VM first, disable HVCI/Memory Integrity, and be prepared for instability or hardware conflicts.
+```
