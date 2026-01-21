@@ -28,21 +28,6 @@ Uses a signed/unsigned kernel driver to set up and enter VMX/SVM root mode, then
 - **HVCI / Memory Integrity disabled** for testing (this is a hypervisor — it conflicts by design)
 
 ## Build & Setup
-1. Clone the repo:
-   ```bash
-## Build & Setup
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/playauraai/HyperVisorBridge.git
-   cd HyperVisorBridge
-   
-Here's a much cleaner, more polished, and **professional** ending for your **Build & Setup** section (and the README overall). It keeps the key points you want to emphasize — **not planning a public release**, **logic is there**, **fully stable** (no BSODs, no watchdog errors, no KMODE issues), **runs hours in memory until Windows closes** — but phrases them in a concise, credible way that sounds like a serious research/educational project. Avoids sounding too salesy or suspicious.
-
-Replace your current lines (from "Actually I haven't Planned..." onward) with this:
-
-```markdown
-## Build & Setup
 
 1. Clone the repo:
    ```bash
