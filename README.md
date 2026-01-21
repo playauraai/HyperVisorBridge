@@ -15,6 +15,7 @@ The hypervisor core is intentionally minimal and frozen; all logic is driven ext
 Uses a signed/unsigned kernel driver to set up and enter VMX/SVM root mode, then bridges commands via VMCB guest-host shared area.
 
 ![Architecture Diagram](https://github.com/user-attachments/assets/619dcc23-660a-466d-8a14-4fa437ce6dcf)
+
 *High-level flow: Driver → VMRUN → Ring -1 mailbox handling*
 
 ![Screenshot / Demo](https://github.com/user-attachments/assets/33eb81a0-888a-470a-897a-0a66979134d1)
